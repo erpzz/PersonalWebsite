@@ -38,6 +38,11 @@ const { createApp } = Vue;
                     });
                 },
                 async submitForm() {
+			require('dotenv').config();
+			const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
+			
+			console.log(`Webhook URL: ${webhookUrl}`);
+
                     const webhookUrl = ; // Replace with your webhook URL
                     const payload = {
                         content: `New Contact Form Submission:\n**Name:** ${this.form.name}\n**Email:** ${this.form.email}\n**Message:**\n${this.form.message}`
