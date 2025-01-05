@@ -38,7 +38,7 @@ const { createApp } = Vue;
                     });
                 },
                 async submitForm() {
-                    const webhookUrl = "https://discord.com/api/webhooks/1318803683240312843/BTskctoTvbfZVEXOMXrRDcPV53ebtH_E2vkiN4K3IuLUBIhXAkabRYOOcJpxxIGIEluw"; // Replace with your webhook URL
+                    const webhookUrl = ; // Replace with your webhook URL
                     const payload = {
                         content: `New Contact Form Submission:\n**Name:** ${this.form.name}\n**Email:** ${this.form.email}\n**Message:**\n${this.form.message}`
                     };
