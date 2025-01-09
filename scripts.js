@@ -37,7 +37,7 @@ createApp({
             });
         },
         async submitForm() {
-            const webhookUrl = process.env.DISCORD_WEBHOOK_URL; // Secure webhook URL
+            const webhookUrl = "https://discord.com/api/webhooks/1325475562407460907/JnQ02o3NaXoxtC2_clq_R30PhojEjfqlDrGP_WdjyUVhhRegi2ClTio626PUsMIVbQg6"; // Secure webhook URL
             const payload = {
                 content: `New Contact Form Submission:\n**Name:** ${this.form.name}\n**Email:** ${this.form.email}\n**Message:**\n${this.form.message}`
             };
