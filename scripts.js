@@ -38,7 +38,7 @@ const { createApp } = Vue;
                     });
                 },
                 async submitForm() {
-                    const webhookUrl = "https://discord.com/api/webhooks/1325475562407460907/JnQ02o3NaXoxtC2_clq_R30PhojEjfqlDrGP_WdjyUVhhRegi2ClTio626PUsMIVbQg6"; // Replace with your webhook URL
+                    const webhookUrl = "https://discord.com/api/webhooks/1336800220574650418/S9Wa-LT2OUZcX2Lq9nmib44i2nSkf-ZHAwBgMRK0Lv_hsYa-nYWivwcnQSq9ScQlPWHr"; // Replace with your webhook URL
                     const payload = {
                         content: `New Contact Form Submission:\n**Name:** ${this.form.name}\n**Email:** ${this.form.email}\n**Message:**\n${this.form.message}`
                     };
