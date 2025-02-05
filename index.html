@@ -17,59 +17,90 @@
     <div id="app">
         <header>
             <h1>Eric Neftali Paiz</h1>
-            <p>IT Admin at Infinite Consulting | Developer & Responsible AI Advocate | Microsoft Certified in Cloud Fundamentals & Security</p>
+            <p>IT Admin & Software Developer | Responsible AI Advocate | Microsoft Certified in Cloud & Security</p>
         </header>
 
-        <main class="container mt-5">
+        <main class="container">
+            <!-- About Me -->
             <section class="section" id="about">
                 <h2>About Me</h2>
                 <p>
-                    I am an IT professional with hands-on experience in transitioning organizations from MSPs to internal IT departments, deploying RMMs and EDRs, and leading security initiatives. With certifications like AZ-900 and SC-900, I am deeply invested in mastering cloud and cybersecurity principles. My passion lies in continuous learning and solving complex IT challenges.
+                    I am an IT professional and software developer with a passion for building and implementing innovative solutions, from AI-driven projects to automation scripts. With certifications like AZ-900 and SC-900, I am deeply invested in cloud technologies and cybersecurity. My experience spans from standing up internal IT departments to crafting robust software projects.
                 </p>
             </section>
 
+            <!-- Key Skills -->
             <section class="section" id="skills">
                 <h2>Key Skills</h2>
                 <ul class="skills-list">
+                    <li>Software Development</li>
                     <li>Azure</li>
                     <li>Cybersecurity</li>
                     <li>Python</li>
-                    <li>IT Management</li>
-                    <li>Automation with PowerShell</li>
+                    <li>PowerShell Automation</li>
                     <li>AI & Local LLM's</li>
-					<li>Programming & Development</li>
-					<li>Chatbot Development</li>
-					<li>Databases (SQL & NoSQL)</li>
+                    <li>Programming & Development</li>
+                    <li>Chatbot Development</li>
+                    <li>Databases (SQL & NoSQL)</li>
                 </ul>
             </section>
 
+            <!-- Projects -->
             <section class="section" id="projects">
-                <!-- Project Cards -->
+                <h2>Projects</h2>
+                <div class="row">
+                    <!-- OmniBot -->
+                    <div class="col-md-4">
+                        <div class="card" @click="toggleDetails('omnibot')">
+                            <div class="card-body">
+                                <h5 class="card-title">OmniBot</h5>
+                                <p class="card-text">An AI-driven chatbot that responds to real-time Kick stream chats, showcasing API integration and automation.</p>
+                                <div v-if="expandedProject === 'omnibot'" class="project-details">
+                                    <p>OmniBot features real-time chat handling and robust AI scripting, demonstrating my ability to integrate external APIs and orchestrate automation frameworks in Python.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ThoughtScribe -->
+                    <div class="col-md-4">
+                        <div class="card" @click="toggleDetails('thoughtscribe')">
+                            <div class="card-body">
+                                <h5 class="card-title">ThoughtScribe</h5>
+                                <p class="card-text">A multi-functional tool designed to boost productivity and support mental well-being.</p>
+                                <div v-if="expandedProject === 'thoughtscribe'" class="project-details">
+                                    <p>
+                                        ThoughtScribe converts PDF notes to speech, summarizes text for quick review, and offers a space for meaningful conversations with an AI-driven agent. Built with Python, Streamlit, ElevenLabs API, and local LLM integration.
+                                    </p>
+                                    <a href="https://github.com/erpzz/ThoughtScribe" target="_blank" rel="noopener" class="btn btn-primary">View on GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
+            <!-- Career Highlights -->
             <section class="section" id="highlights">
                 <h2>Career Highlights</h2>
                 <p>
-                    At Infinite Consulting Corp (ICC), I built the IT department from the ground up, transitioning the organization from an MSP to an internal IT setup. This involved deploying tools like NinjaOne and SentinelOne, rolling out company-wide MFA for over 100 users, and managing Entra ID and Intune deployments to ensure seamless operations and security.
+                    My software engineering journey includes building advanced AI-driven chatbots, local LLM integrations, and automation tools. Projects like OmniBot and ThoughtScribe demonstrate my passion for problem-solving and creative solutions. I strive to continuously refine my skills through hands-on experimentation and research.
                 </p>
                 <p>
-                    Leveraging my programming expertise, I developed automation scripts in PowerShell and Python to streamline processes such as device onboarding, Windows upgrades, and security audits. These efforts significantly improved operational efficiency and strengthened the company's cybersecurity posture.
-                </p>
-                <p>
-                    Outside of work, I created the OmniBot project, an AI-driven chatbot designed to autonomously respond to real-time Kick stream chats. This project showcases my ability to integrate APIs and apply automation to solve real-world problems, demonstrating my passion for programming and continuous learning.
+                    In addition to my software focus, I played a key role in transitioning my current organization from an MSP to an internal IT department, deploying RMM/EDR solutions, implementing MFA for over 100 users, and managing Entra ID and Intune for a secure and streamlined environment.
                 </p>
             </section>
 
+            <!-- Contact -->
             <section class="section" id="contact">
                 <h2>Contact Me</h2>
                 <form class="contact-form" @submit.prevent="submitForm">
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" class="form-control" v-model="form.name" required>
+                        <input type="text" id="name" class="form-control" v-model="form.name" required />
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" class="form-control" v-model="form.email" required>
+                        <input type="email" id="email" class="form-control" v-model="form.email" required />
                     </div>
                     <div class="mb-3">
                         <label for="message" class="form-label">Message</label>
@@ -82,8 +113,7 @@
 
         <footer>
             <p>Email: <a href="mailto:eneftpaiz@gmail.com" target="_blank" rel="noopener" style="color: #FFFFFF;">eneftpaiz@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/ericpzz/" target="_blank" rel="noopener" style="color: #FFFFFF;">https://www.linkedin.com/in/ericpzz/</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/ericpzz/" target="_blank" rel="noopener" style="color: #FFFFFF;">linkedin.com/in/ericpzz</a></p>
         </footer>
     </div>
 </body>
-</html>
